@@ -17,20 +17,20 @@ class MenuItem {
 
 const appMenuItems = <MenuItem>[
   MenuItem(
-    title: 'Botones',
-    subtitle: 'Varios botones en flutter',
+    title: 'Buttons',
+    subtitle: 'Various flutter Buttons',
     url: '/buttons',
     icon: Icons.smart_button_outlined
   ),
   MenuItem(
-    title: 'Tarjetas',
-    subtitle: 'Un contenedor con estilos',
+    title: 'Cards',
+    subtitle: 'A Container with styles',
     url: '/cards',
     icon: Icons.credit_card
   ),
   MenuItem(
     title: 'Progress Indicators',
-    subtitle: 'Generales y controlados',
+    subtitle: 'Generic and controlled',
     url: '/progress',
     icon: Icons.refresh_rounded
   ),
@@ -39,5 +39,11 @@ const appMenuItems = <MenuItem>[
     subtitle: 'Screen Indicators',
     url: '/snackbars',
     icon: Icons.info_outline
+  ),
+  MenuItem(
+    title: 'Animated Container',
+    subtitle: 'An animated Stateful widget',
+    url: '/animated',
+    icon: Icons.animation_rounded
   ),
 ];
