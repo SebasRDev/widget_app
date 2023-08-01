@@ -1,10 +1,41 @@
+import 'dart:math' show Random;
 import 'package:flutter/material.dart';
 
-class AnimatedScreen extends StatelessWidget {
+class AnimatedScreen extends StatefulWidget {
 
   static const name = 'animated_screen';
 
   const AnimatedScreen({super.key});
+
+  @override
+  State<AnimatedScreen> createState() => _AnimatedScreenState();
+}
+
+class _AnimatedScreenState extends State<AnimatedScreen> {
+
+  double width = 50;
+  double height = 50;
+  Color color = Colors.indigo;
+  double borderRadius = 10.0;
+
+  void changeShape() {
+
+    final random = Random();
+
+    width = random.nextInt(300) + 50;
+    height = random.nextInt(450) + 50;
+    color = Color.fromRGBO(
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextDouble(),
+    );
+    borderRadius = random.nextDouble() * 50;
+
+    setState(() {});
+
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +47,20 @@ class AnimatedScreen extends StatelessWidget {
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 400),
           curve: Curves.easeOutCubic,
-          width: 300,
-          height: 200,
+          width: width,
+          height: height,
           decoration: BoxDecoration(
-            color: Colors.red,
-            borderRadius: BorderRadius.circular(20)
+            color: color,
+            borderRadius: BorderRadius.circular(borderRadius)
           ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: (){}, child: Icon(Icons.play_arrow_rounded),),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){
+          changeShape();
+        }, 
+        child: const Icon(Icons.play_arrow_rounded),
+      ),
     );
   }
 }
