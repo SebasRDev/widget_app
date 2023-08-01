@@ -52,4 +52,10 @@ const appMenuItems = <MenuItem>[
     url: '/ui-controls',
     icon: Icons.check_circle_outline_outlined
   ),
+  MenuItem(
+    title: 'Tutorial',
+    subtitle: 'Tutorial pane view',
+    url: '/tutorial',
+    icon: Icons.new_releases_outlined
+  ),
 ];
