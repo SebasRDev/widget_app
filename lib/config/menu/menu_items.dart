@@ -46,4 +46,10 @@ const appMenuItems = <MenuItem>[
     url: '/animated',
     icon: Icons.animation_rounded
   ),
+  MenuItem(
+    title: 'UI Controls',
+    subtitle: 'Control for ui',
+    url: '/ui-controls',
+    icon: Icons.check_circle_outline_outlined
+  ),
 ];
