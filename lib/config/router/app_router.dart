@@ -55,5 +55,10 @@ final appRouter = GoRouter(
       name: InfiniteScrollScreen.name,
       builder: (context, state) => const InfiniteScrollScreen(),
     ),
+    GoRoute(
+      path: '/change-color',
+      name: ChangeColorScreen.name,
+      builder: (context, state) => const ChangeColorScreen(),
+    ),
   ],
 );

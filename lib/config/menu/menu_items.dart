@@ -70,4 +70,10 @@ const appMenuItems = <MenuItem>[
     url: '/infinte-scroll',
     icon: Icons.move_down_rounded
   ),
+  MenuItem(
+    title: 'Select Color',
+    subtitle: 'Change the color of the app',
+    url: '/change-color',
+    icon: Icons.color_lens_outlined
+  ),
 ];
